@@ -1,0 +1,57 @@
+.detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.detail-card {
+    background-color: #ffffff;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.detail-image img {
+    width: 100%; /* Full width of the card */
+    height: 400px; /* Fixed height for consistency */
+    object-fit: cover; /* Prevents image distortion */
+    border-bottom: 1px solid #ddd; /* Separator line */
+}
+
+.detail-content {
+    padding: 20px;
+}
+
+.detail-content h1 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: #fff; /* Dark text */
+}
+
+.detail-content p {
+    font-size: 1em;
+    color: #fff; /* Slightly lighter text for description */
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Primary blue */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

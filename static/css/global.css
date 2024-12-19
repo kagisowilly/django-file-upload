@@ -1,0 +1,98 @@
+/* static/css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.main-block{
+    margin-bottom: 50px;
+}
+
+.image-card > img {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation Bar Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin-left: 20px;
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #f4b400; 
+}
+
+/* Navigation Bar Styling End*/
+
+/* Footer Styling  */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+/* Footer Styling  end*/
