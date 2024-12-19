@@ -1,0 +1,35 @@
+{% load static %} <!-- Loads static files for CSS, JS, etc. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Project{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    {% block extra_css %}{% endblock %}
+    <script src="{% static 'javascript/main.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">
+                <img src="{% static 'images/logo.jpg' %}" alt="Logo" style="height: 40px; width: auto; ">
+            </a>
+            <div>
+                <a href="/">Home</a>
+                <a href="/images/">Images</a>                
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="main-block">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> KM</p>
+    </footer>
+</body>
+</html>

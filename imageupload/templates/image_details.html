@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/image_details.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="detail-container">
+    <div class="detail-card" style="background-color: {{ image.hex_color|default:'#CCCCCC' }}">
+        <div class="detail-image">
+            <img src="{{ image.image.url }}" alt="{{ image.title }}">
+        </div>
+        <div class="detail-content">
+            <h1>{{ image.title }}</h1>
+            <p>{{ image.hex_color }}</p>
+            <a href="{% url 'images' %}" class="back-button">Back to List</a>
+        </div>
+    </div>
+</div>
+{%endblock%}

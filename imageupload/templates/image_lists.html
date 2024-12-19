@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/image_lists.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1> Images</h1>
+
+    <!-- Image grid container -->
+    <div class="image-grid">
+        {% for image in images %}
+        <a href="{% url 'image_detail' image.id %}">
+            <div class="image-card">
+                <h4>{{ image.title }}</h4>
+                <img class="card-image" src="{{ image.image.url }}" alt="{{ image.title }}">
+                <div style="background-color: {{ image.hex_color|default:'#CCCCCC' }}" class="hex-color-box">
+                    <p class="hex-color">Hex Color: {{ image.hex_color }}</p>
+                </div>
+            </div>
+        </a>
+        {% empty %}
+            <p>No images have been uploaded yet.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

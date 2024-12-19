@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/image_upload.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Upload Image</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required placeholder="Image title" maxlength="55" onkeyup="count_down(this)">
+    <p id="character-limit" style="display: none; color: red;">character limit reached</p>
+    <label for="image">Select Image:</label>
+    <input type="file" id="image" name="image" accept="image/*"  onchange="previewImage(event)" required>
+
+    <img id="image-preview" src="" alt="Image Preview" style="display: none; max-width: 100%; margin-bottom: 20px;">
+    <button type="submit">Upload</button>
+</form>
+{% if form.errors %}
+    <script>
+        alert("Form Errors: \n{% for field, errors in form.errors.items %}{{ field }}: {{ errors|join:', ' }}\n{% endfor %}");
+    </script>
+{% endif %}
+{% endblock %}
