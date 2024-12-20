@@ -26,11 +26,17 @@ h1 {
     max-width: 1200px;
 }
 
+.image-grid > a{
+    text-decoration: none;
+    color: #333;
+}
+
 /* Individual image card */
 .image-card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
+    max-width: 300px;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
